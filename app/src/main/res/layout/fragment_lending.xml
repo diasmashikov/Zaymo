@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nsLending"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.zaymo.fragmentsZaymo.LendingsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+
+        <LinearLayout
+            android:id="@+id/llLendingTotalLendings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvLendingTotalLendings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Сумма кредитов"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kzsss"
+                android:textSize="@dimen/tsExpandableTextViews" />
+
+            <TextView
+                android:id="@+id/tvLendingTotalLendingsSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="10,000 Т"
+                android:textColor="@color/mainAppColor"
+                android:fontFamily="@font/kzsss"
+                android:textSize="@dimen/tsFragmentHeadings" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctLendingCurrentLendings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            android:padding="@dimen/padComponent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llTotalLendings">
+
+            <TextView
+                android:id="@+id/tvLendingCurrentLendings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Активные кредиты"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kzsss"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnLendingExpCurrentLendings"
+                android:layout_width="@dimen/whExpandableButton"
+                android:layout_height="@dimen/whExpandableButton"
+                android:background="@drawable/layout_bg"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elLendingCurrentLendings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="5dp"
+            app:el_duration="0"
+            app:el_expanded="true"
+            app:el_parallax="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctCurrentLendings">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLendingCurrentLendings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+                />
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctLendingOfferLendings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mtComponent"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="5dp"
+            android:padding="@dimen/padComponent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elCurrentLendings">
+
+            <TextView
+                android:id="@+id/tvLendingOfferLendings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Предлагаемые кредиты"
+                android:textColor="@color/black"
+                android:fontFamily="@font/kzsss"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnLendingExpOfferLendings"
+                android:layout_width="@dimen/whExpandableButton"
+                android:layout_height="@dimen/whExpandableButton"
+                android:background="@drawable/layout_bg"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLendingOfferLendings"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elLendingOfferLendings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            app:el_duration="0"
+            app:el_expanded="true"
+            app:el_parallax="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctOfferLendings">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvLendingOfferLendings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+

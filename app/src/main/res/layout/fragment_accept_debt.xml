@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.zaymo.fragmentsZaymo.BorrowingsSection.PayDebtFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctDebtSummations"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/mlMainLayout"
+        android:layout_marginRight="@dimen/mrMainLayout"
+        android:layout_marginBottom="@dimen/mbMainLayout"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tvCreditBorrowerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Диас М"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCreditCreditSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:layout_marginTop="10dp"
+            android:text="Сумма долга"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditBorrowerName" />
+
+        <TextView
+            android:id="@+id/tvCreditLendSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="70000 T"
+            android:textColor="@color/mainAppColor"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditCreditSum"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditCreditSum" />
+
+        <TextView
+            android:id="@+id/tvCreditPeriodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="51dp"
+            android:layout_toRightOf="@id/tvCreditCreditSum"
+            android:fontFamily="@font/kzsss"
+            android:text="Срок"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toEndOf="@+id/tvCreditCreditSum"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditCreditSum" />
+
+        <TextView
+            android:id="@+id/tvToLendPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCreditPeriodText"
+            android:layout_alignLeft="@id/tvCreditPeriodText"
+            android:fontFamily="@font/kzsss"
+            android:text="6 месяцев"
+            android:textColor="@color/mainAppColor"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditPeriodText"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditPeriodText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctDebtConditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mtComponent"
+        android:background="@drawable/shadow_background"
+        android:padding="@dimen/padComponent"
+        android:layout_marginLeft="@dimen/mlMainLayout"
+        android:layout_marginRight="@dimen/mrMainLayout"
+        android:layout_marginBottom="@dimen/mbMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/ctDebtSummations">
+
+        <TextView
+            android:id="@+id/tvCreditPayMethodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Метод выплаты по долгам"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5169 **** **** 4953 - KASPI BANK"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditPayMethodText"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditPayMethodText" />
+
+
+        <TextView
+            android:id="@+id/tvCreditNotifyPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Напоминание"
+            android:textSize="@dimen/tsInfoDescription"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/tvCreditAutomaticPayEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Включено"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            android:textColor="@color/mainAppColor"
+            android:fontFamily="@font/kzsss"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditNotifyPay"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditNotifyPay" />
+
+        <TextView
+            android:id="@+id/tvCreditAutomaticPayPeriodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/kzsss"
+            android:text="Выплата производится промежутком"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditAutomaticPayEnabled"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditAutomaticPayEnabled" />
+
+        <TextView
+            android:id="@+id/tvCreditAutomaticPayPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="1 месяц"
+            android:textColor="@color/mainAppColor"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditAutomaticPayPeriodText"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditAutomaticPayPeriodText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnAcceptDebt"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mtComponent"
+        android:gravity="center"
+        android:text="Взять в долг"
+        android:background="@drawable/btnrounded"
+        android:fontFamily="@font/kzsss"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ctDebtConditions" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

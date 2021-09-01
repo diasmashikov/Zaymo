@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padComponent"
+    android:layout_marginTop="@dimen/mtMainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvPayDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="Дата выплаты"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPayDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="30 мая, 2021"
+        android:textColor="@color/mainAppColor"
+        android:textSize="@dimen/tsCreditRelatedInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvPayDateText"
+        app:layout_constraintTop_toBottomOf="@+id/tvPayDateText" />
+
+    <TextView
+        android:id="@+id/tvPaidInTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:layout_marginLeft="15dp"
+        android:text="Выплачено в сроки"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toEndOf="@+id/tvPayDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPaidInTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="Да"
+        android:textColor="@color/mainAppColor"
+        android:textSize="@dimen/tsCreditRelatedInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvPaidInTimeText"
+        app:layout_constraintTop_toBottomOf="@+id/tvPaidInTimeText" />
+
+    <TextView
+        android:id="@+id/tvPaidCreditSumText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:layout_marginLeft="15dp"
+        android:text="Сумма"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toEndOf="@+id/tvPaidInTimeText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPaidCreditSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="11666 Т"
+        android:textColor="@color/mainAppColor"
+        android:textSize="@dimen/tsCreditRelatedInfo"
+        app:layout_constraintStart_toStartOf="@+id/tvPaidCreditSumText"
+        app:layout_constraintTop_toBottomOf="@+id/tvPaidCreditSumText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

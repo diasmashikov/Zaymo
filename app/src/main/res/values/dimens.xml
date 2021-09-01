@@ -1,0 +1,42 @@
+<resources>
+    // Margins for the main layout
+    // fragment_lend, fragment_lending
+    <dimen name="mtMainLayout">10dp</dimen>
+    <dimen name="mbMainLayout">10dp</dimen>
+    <dimen name="mlMainLayout">10dp</dimen>
+    <dimen name="mrMainLayout">10dp</dimen>
+
+    // TopMargin for all TopComponents in all Views
+    <dimen name="mtAllTopComponents">25dp</dimen>
+
+    //TopMargin for components
+    <dimen name="mtComponent">10dp</dimen>
+
+    // Padding for shadow_backgrounds
+    // fragment_lend
+    <dimen name="padComponent">10dp</dimen>
+
+    // TextSize for Heading Of Fragments
+    <dimen name="tsFragmentHeadings">25dp</dimen>
+
+    // TextSize for ExpandableTextViews
+    <dimen name="tsExpandableTextViews">20dp</dimen>
+
+    //TextSize for CreditInfoRelatedValues
+    <dimen name="tsCreditRelatedInfo">18dp</dimen>
+
+    //TextSize for InfoDescription
+    <dimen name="tsInfoDescription">10dp</dimen>
+
+    //TextSize for sum left to pay/receive in credit/debt items
+    <dimen name="tsLeftSum">14sp</dimen>
+
+    // Width and Height for ExpandableButtons
+    <dimen name="whExpandableButton">30dp</dimen>
+
+
+
+    //
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profileDataBlockSize">10sp</dimen>
+</resources>

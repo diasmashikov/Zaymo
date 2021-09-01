@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_background"
+        android:layout_marginLeft="@dimen/mlMainLayout"
+        android:layout_marginRight="@dimen/mrMainLayout"
+        android:layout_marginBottom="@dimen/mbMainLayout"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tvRequestSumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Сумма долга"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvRequestBorrowingSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="70000 Т"
+            android:textColor="@color/mainAppColor"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            app:layout_constraintStart_toStartOf="@+id/tvRequestSumText"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestSumText" />
+
+        <SeekBar
+            android:id="@+id/sbToLendRate"
+            style="@style/MySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@color/mainAppColor"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestBorrowingSum" />
+
+        <TextView
+            android:id="@+id/tvMinSumSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kzsss"
+            android:text="0"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/sbToLendRate"
+            app:layout_constraintTop_toBottomOf="@+id/sbToLendRate" />
+
+        <TextView
+            android:id="@+id/tvMaxSumSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kzsss"
+            android:text="1,000,000"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintEnd_toEndOf="@+id/sbToLendRate"
+            app:layout_constraintTop_toBottomOf="@+id/sbToLendRate" />
+
+
+
+        <TextView
+            android:id="@+id/tvRequestBorrowingPeriodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mtComponent"
+            android:fontFamily="@font/kzsss"
+            android:text="Срок взятия долга"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/tvMinSumSeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaxSumSeekBar" />
+
+        //
+
+
+        <TextView
+            android:id="@+id/tvRequestPeriodOfTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="1"
+            android:textColor="@color/mainAppColor"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+
+            app:layout_constraintStart_toStartOf="@+id/tvRequestBorrowingPeriodText"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestBorrowingPeriodText" />
+
+
+        <Spinner
+            android:id="@+id/spPeriodUnitDebt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/unitPeriod_array"
+            app:layout_constraintStart_toEndOf="@+id/tvRequestPeriodOfTime"
+            app:layout_constraintTop_toTopOf="@+id/tvRequestPeriodOfTime" />
+
+        <SeekBar
+            android:id="@+id/sbRequestPeriodOfTime"
+            style="@style/MySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@color/mainAppColor"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestPeriodOfTime" />
+
+        <TextView
+            android:id="@+id/tvMinTimeSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kzsss"
+            android:text="0"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/sbRequestPeriodOfTime"
+            app:layout_constraintTop_toBottomOf="@+id/sbRequestPeriodOfTime" />
+
+        <TextView
+            android:id="@+id/tvMaxTimeSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kzsss"
+            android:text="3"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintEnd_toEndOf="@+id/sbRequestPeriodOfTime"
+            app:layout_constraintTop_toBottomOf="@+id/sbRequestPeriodOfTime" />
+
+        //
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mtComponent"
+        android:background="@drawable/shadow_background"
+        android:padding="@dimen/padComponent"
+        android:layout_marginLeft="@dimen/mlMainLayout"
+        android:layout_marginRight="@dimen/mrMainLayout"
+        android:layout_marginBottom="@dimen/mbMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <TextView
+            android:id="@+id/tvToBorrowMethodText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Метод выплаты по долгам"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spToBorrowMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="19dp"
+            android:entries="@array/payMethods_array"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvToBorrowMethodText" />
+
+        <TextView
+            android:id="@+id/tvCreditNotifyPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:layout_marginTop="10dp"
+            android:text="Напоминание(происходит за день до выплаты)"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/spToBorrowMethod" />
+
+        <TextView
+            android:id="@+id/tvCreditAutomaticPayEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Включено"
+            android:textSize="@dimen/tsCreditRelatedInfo"
+            android:textColor="@color/mainAppColor"
+            android:fontFamily="@font/kzsss"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditNotifyPay"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditNotifyPay" />
+
+
+        <TextView
+            android:id="@+id/tvAutomaticPayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/kzsss"
+            android:text="Выплата производится каждые"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/tvCreditAutomaticPayEnabled"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreditAutomaticPayEnabled" />
+
+        <TextView
+            android:id="@+id/tvRequestPayPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="1"
+            android:textColor="@color/mainAppColor"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvAutomaticPayText"
+            app:layout_constraintTop_toBottomOf="@+id/tvAutomaticPayText" />
+
+
+        <Spinner
+            android:id="@+id/spPeriodUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:entries="@array/unitPeriod_array"
+            app:layout_constraintStart_toEndOf="@+id/tvRequestPayPeriod"
+            app:layout_constraintTop_toBottomOf="@+id/tvAutomaticPayText" />
+
+        <SeekBar
+            android:id="@+id/sbRequestPayPeriod"
+            style="@style/MySeekBar"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@android:color/darker_gray"
+            android:progressTint="@color/mainAppColor"
+            android:thumb="@drawable/thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequestPayPeriod" />
+
+        <TextView
+            android:id="@+id/tvMinPayPeriodSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:layout_marginTop="5dp"
+            android:text="1"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintStart_toStartOf="@+id/sbRequestPayPeriod"
+            app:layout_constraintTop_toBottomOf="@+id/sbRequestPayPeriod" />
+
+        <TextView
+            android:id="@+id/tvMaxPayPeriodSeekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kzsss"
+            android:text="3"
+            android:textSize="@dimen/tsInfoDescription"
+            app:layout_constraintEnd_toEndOf="@+id/sbRequestPayPeriod"
+            app:layout_constraintTop_toBottomOf="@+id/sbRequestPayPeriod" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.Button
+        android:id="@+id/btnToLendMakeOffer"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="Запросить долг"
+        android:background="@drawable/btnrounded"
+        android:textColor="@color/white"
+        android:fontFamily="@font/kzsss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

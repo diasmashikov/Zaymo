@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Zaymo</string>
+
+    // Array for pay schedule
+    <string-array name="unitPeriod_array">
+        <item>Месяц</item>
+        <item>Неделя</item>
+        <item>День</item>
+    </string-array>
+
+    // Array for banking cards
+    <string-array name="payMethods_array">
+        <item>5169 **** **** 4953 - KASPI BANK</item>
+        <item>5154 **** **** 4934 - HALYK BANK</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

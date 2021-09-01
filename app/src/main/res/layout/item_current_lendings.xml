@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/mlMainLayout"
+    android:layout_marginRight="@dimen/mrMainLayout"
+    android:layout_marginBottom="@dimen/mbMainLayout"
+    android:padding="@dimen/padComponent"
+
+    android:background="@drawable/shadow_background_with_border"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <TextView
+        android:id="@+id/tvDebtUserGivingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:layout_marginLeft="5dp"
+        android:text="Кому"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDebtUserGiving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="Рустам М"
+        android:textColor="@color/mainAppColor"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tvDebtUserGivingText"
+        app:layout_constraintTop_toBottomOf="@+id/tvDebtUserGivingText" />
+
+
+    <TextView
+        android:id="@+id/tvCreditPeriodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kzsss"
+        android:text="Срок"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toStartOf="@+id/tvDebtUserGiving"
+        app:layout_constraintTop_toBottomOf="@+id/tvDebtUserGiving" />
+
+    <TextView
+        android:id="@+id/tvCreditPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="6 месяцев"
+        android:textColor="@color/mainAppColor"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCreditPeriodText"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditPeriodText" />
+
+
+    <TextView
+        android:id="@+id/tvCreditPayNotifierText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:layout_marginTop="10dp"
+        android:text="Дата оплаты"
+        android:textSize="@dimen/tsInfoDescription"
+        app:layout_constraintStart_toStartOf="@+id/tvCreditPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditPeriod" />
+
+    <TextView
+        android:id="@+id/tvDebtPayNotifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="6 июня, 2021"
+        android:textColor="@color/mainAppColor"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCreditPayNotifierText"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditPayNotifierText" />
+
+    <TextView
+        android:id="@+id/tvCreditSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/kzsss"
+        android:text="77000 T"
+        android:textColor="@color/mainAppColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:src="@drawable/ic_trend_up_tele"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCreditSumPaid"
+        app:layout_constraintEnd_toStartOf="@+id/tvCreditSumPaid"
+        app:layout_constraintStart_toStartOf="@+id/tvCreditSum"
+        app:layout_constraintTop_toTopOf="@+id/tvCreditSumPaid" />
+
+    <TextView
+        android:id="@+id/tvCreditSumPaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kzsss"
+        android:text="12,833.2 T"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/mainAppColor"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvCreditSum"
+        app:layout_constraintTop_toBottomOf="@+id/tvCreditSum" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

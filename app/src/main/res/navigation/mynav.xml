@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynav"
+    app:startDestination="@id/lendingsFragment">
+
+    <fragment
+        android:id="@+id/lendingsFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.LendingsFragment"
+        tools:layout="@layout/fragment_lending" >
+        <action
+            android:id="@+id/action_lendingsFragment_to_creditFragment"
+            app:destination="@id/creditFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_lendingsFragment_to_lendFragment"
+            app:destination="@id/lendFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/borrowingsFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.BorrowingsSection.BorrowingsFragment"
+        tools:layout="@layout/fragment_borrowing" >
+        <action
+            android:id="@+id/action_borrowingsFragment_to_requestBorrowingFragment"
+            app:destination="@id/requestBorrowingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>/>
+        <action
+            android:id="@+id/action_borrowingsFragment_to_acceptDebtFragment"
+            app:destination="@id/acceptDebtFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>/>
+        <action
+            android:id="@+id/action_borrowingsFragment_to_payDebtFragment"
+            app:destination="@id/payDebtFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/creditFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.CreditFragment"
+        android:label="fragment_credit"
+        tools:layout="@layout/fragment_credit" >
+        <argument
+            android:name="credit"
+            app:argType="com.example.zaymo.models.Credit" />
+        <action
+            android:id="@+id/action_creditFragment_to_creditPayHistoryFragment"
+            app:destination="@id/creditPayHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>/>
+    </fragment>
+    <fragment
+        android:id="@+id/lendFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.LendFragment"
+        android:label="fragment_lend"
+        tools:layout="@layout/fragment_lend" >
+        <argument
+            android:name="credit"
+            app:argType="com.example.zaymo.models.Credit" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditPayHistoryFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.CreditPayHistoryFragment"
+        android:label="fragment_credit_pay_history"
+        tools:layout="@layout/fragment_credit_pay_history" />
+    <fragment
+        android:id="@+id/requestBorrowingFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.BorrowingsSection.RequestBorrowingFragment"
+        android:label="fragment_request_borrowing"
+        tools:layout="@layout/fragment_request_borrowing" />
+    <fragment
+        android:id="@+id/payDebtFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.BorrowingsSection.PayDebtFragment"
+        android:label="fragment_pay_debt"
+        tools:layout="@layout/fragment_pay_debt" />
+    <fragment
+        android:id="@+id/acceptDebtFragment"
+        android:name="com.example.zaymo.ui.zaymo.fragmentsZaymo.BorrowingsSection.AcceptDebtFragment"
+        android:label="fragment_accept_debt"
+        tools:layout="@layout/fragment_accept_debt" />
+</navigation>

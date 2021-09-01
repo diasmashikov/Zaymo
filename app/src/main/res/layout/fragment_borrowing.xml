@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/nsBorrowing"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.zaymo.fragmentsZaymo.BorrowingsSection.BorrowingsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_marginLeft="4dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            android:id="@+id/ctBorrowingTotalBorrowings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/llBorrowingTotalBorrowings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvBorrowingTotalBorrowings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kzsss"
+                    android:gravity="left"
+                    android:textColor="@color/black"
+                    android:text="Сумма долгов"
+                    android:textSize="@dimen/tsExpandableTextViews" />
+
+                <TextView
+                    android:id="@+id/tvBorrowingTotalBorrowingsSum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kzsss"
+                    android:gravity="left"
+                    android:textColor="@color/mainAppColor"
+                    android:text="25,000 Т"
+                    android:textSize="@dimen/tsFragmentHeadings" />
+
+
+            </LinearLayout>
+
+            <android.widget.Button
+                android:id="@+id/btnBorrow"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="Запросить долг"
+                android:background="@drawable/btnrounded"
+                android:textColor="@color/white"
+                android:theme="@style/Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/llBorrowingTotalBorrowings"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llBorrowingTotalBorrowings" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="@dimen/padComponent"
+            android:id="@+id/ctBorrowingCurrentBorrowings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctTotalBorrowings">
+
+            <TextView
+                android:id="@+id/tvBorrowingCurrentLendings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/kzsss"
+                android:text="Активные долги"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnBorrowingExpCurrentBorrowings"
+                android:layout_width="@dimen/whExpandableButton"
+                android:layout_height="@dimen/whExpandableButton"
+                android:background="@drawable/layout_bg"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elBorrowingCurrentBorrowings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            app:el_duration="0"
+            app:el_expanded="true"
+            app:el_parallax="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctCurrentBorrowings">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBorrowingCurrentBorrowings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctBorrowingOfferBorrowings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="5dp"
+            android:padding="@dimen/padComponent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/elCurrentBorrowings">
+
+            <TextView
+                android:id="@+id/tvBorrowingOfferLendings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/kzsss"
+                android:text="Предлагаемые долги"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnBorrowingExpOfferBorrowings"
+                android:layout_width="@dimen/whExpandableButton"
+                android:layout_height="@dimen/whExpandableButton"
+                android:background="@drawable/layout_bg"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/elBorrowingOfferBorrowings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mlMainLayout"
+            android:layout_marginRight="@dimen/mrMainLayout"
+            android:layout_marginBottom="@dimen/mbMainLayout"
+            app:el_duration="0"
+            app:el_expanded="true"
+            app:el_parallax="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ctOfferBorrowings">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBorrowingOfferBorrowings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+      

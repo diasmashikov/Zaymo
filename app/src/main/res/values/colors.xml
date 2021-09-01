@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FFFFFF</color>
+    <color name="purple_700">#FFFFFF</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainAppColor">#0088cc</color>
+    <color name="secondaryAppColor">#7518B6</color>
+    <color name="mainAppColorTransparent">#9900ADE6</color>
+    <color name="quadrantsColor">#00A0E3</color>
+    <color name="coal">#80000000</color>
+
+    // CreditScoreSystemColors
+    <color name="highCreditScore">#00FF00</color>
+    <color name="mediumCreditScore">#ffff00</color>
+    <color name="lowCreditScore">#FF0000</color>
+
+
+</resources>

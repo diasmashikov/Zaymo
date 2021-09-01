@@ -1,0 +1,318 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.zaymo.fragmentsZaymo.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mlMainLayout"
+        android:layout_marginRight="@dimen/mrMainLayout"
+        android:layout_marginBottom="@dimen/mbMainLayout"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/imagee"
+            app:civ_border_color="@color/mainAppColor"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kzsss"
+            android:text="Диас М"
+            android:textColor="@color/mainAppColor"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctTotalCreditSummations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/padComponent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/tvTotalCreditStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:gravity="left"
+                android:text="Кредитная нагрузка"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditSumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:layout_marginTop="10dp"
+                android:text="Сумма кредитов"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalCreditStatus" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="77000 T"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserCreditSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditSumText" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditSumLeftText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:layout_marginTop="10dp"
+                android:text="Сумма выплат"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditSum" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditSumLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="30000 T"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserCreditSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditSumLeftText" />
+
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditsGivenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Количество выданных кредитов"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toEndOf="@+id/tvTotalUserCreditSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalCreditStatus" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditsGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="3"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserCreditsGivenText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditsGivenText" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditsLateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Задержки по выплатам"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toEndOf="@+id/tvTotalUserCreditSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditsGiven" />
+
+            <TextView
+                android:id="@+id/tvTotalUserCreditsLate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="0"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserCreditsGivenText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditsLateText" />
+
+            <ProgressBar
+                android:id="@+id/pbTotalCreditBody"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:scaleY="2"
+                android:theme="@style/Theme.Zaymo.ProgressBarCreditBody"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserCreditSumLeft" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctTotalDebtSummations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mtComponent"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/padComponent"
+            app:layout_constraintTop_toBottomOf="@+id/ctTotalCreditSummations"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/tvTotalDebtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:gravity="left"
+                android:text="Долговая нагрузка"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tsExpandableTextViews"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtSumText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Сумма долгов"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalDebtStatus" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="25000 T"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserDebtSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtSumText" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtSumLeftText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Сумма выплат"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtSum" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtSumLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="10000 T"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserDebtSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtSumLeftText" />
+
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtsGivenText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Количество долгов"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toEndOf="@+id/tvTotalUserDebtSumText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalDebtStatus" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtsGiven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="2"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserDebtsGivenText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtsGivenText" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtsLateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kzsss"
+                android:text="Задержки по выплатам"
+                android:textSize="@dimen/tsInfoDescription"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserDebtsGivenText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtsGiven" />
+
+            <TextView
+                android:id="@+id/tvTotalUserDebtsLate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kzsss"
+                android:text="1"
+                android:textColor="@color/mainAppColor"
+                android:textSize="@dimen/tsCreditRelatedInfo"
+                app:layout_constraintStart_toStartOf="@+id/tvTotalUserDebtsGivenText"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtsLateText" />
+
+            <ProgressBar
+                android:id="@+id/pbTotalDebtBody"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:scaleY="2"
+                android:theme="@style/Theme.Zaymo.ProgressBarCreditBody"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTotalUserDebtSumLeft" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
